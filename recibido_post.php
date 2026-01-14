@@ -1,6 +1,6 @@
 <?php
-    $nombre = htmlspecialchars($_POST['nombre']);
-    $correo = htmlspecialchars($_POST['correo']);
+    $nombre = $_POST['nombre'] ?? "";
+    $correo = $_POST['correo'] ?? "";
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +26,8 @@
     <h2>Formulario enviado con Método POST</h2>
     <h3>Datos Recibidos:</h3
     <ul>
-    <li><strong>Nombre:</strong> <?$nombre?></li>
-    <li><strong>Correo electrónico:</strong><?$correo?></li>
+    <li><strong>Nombre:</strong> <?=$nombre?></li>
+    <li><strong>Correo electrónico:</strong><?=$correo?></li>
     </ul>
     <p>¡Gracias por contactarnos! Hemos recibido tu información correctamente.</p>
 </body>
